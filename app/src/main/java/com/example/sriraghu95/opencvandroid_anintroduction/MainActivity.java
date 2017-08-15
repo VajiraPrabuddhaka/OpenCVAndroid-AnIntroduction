@@ -20,15 +20,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+//        TextView tv = (TextView) findViewById(R.id.sample_text);
+//        tv.setText(stringFromJNI());
 
         // Button to call OpenCV Camera Activity
         Button cameraInit = (Button) findViewById(R.id.cameraInit);
         cameraInit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),OpenCVCamera.class);
+                Intent i = new Intent(getApplicationContext(),EdgeDetection.class);
                 startActivity(i);
             }
         });
